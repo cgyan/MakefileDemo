@@ -4,13 +4,16 @@
 # Put external headers in the following folder:
 # C:\Program_Files\mingw-w64\x86_64-6.3.0-posix-sjlj-rt_v5-rev2\mingw64\x86_64-w64-mingw32\include
 # =============================================================================================
+
+RECURSIVEWILDCARD=$(wildcard $1$2) $(foreach d,$(wildcard $1*),$(call RECURSIVEWILDCARD,$d/,$2))
+
 CC 			:= g++
 PROJDIR		:= $(shell pwd)
 SRCDIR 		:= src
 BUILDDIR	:= build
 TARGET		:= bin/runner
 SRCEXT 		:= cpp
-ALLSRCS 	:= $(wildcard $(SRCDIR)/*.$(SRCEXT))
+ALLSRCS		:= $(call RECURSIVEWILDCARD,$(SRCDIR)/,*.$(SRCEXT))
 EXCLSRCS	:=
 FILTSRCS	:= $(filter-out $(EXCLSRCS),$(ALLSRCS))
 OBJS		:= $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(FILTSRCS:.$(SRCEXT)=.o))
@@ -37,7 +40,8 @@ $(TARGET) : $(OBJS)
 	@echo ''
 
 $(BUILDDIR)/%.o : $(SRCDIR)/%.cpp
-	@echo Building file: $<
+	@echo Building file: $< into target: $@
+	@mkdir -p $(dir $@)
 	$(CC) $(CPPFLAGS) $(CFLAGS) $(CXXFLAGS) $(INC) -MD -c $< -o $@
 	@cp $(BUILDDIR)/$*.d $(BUILDDIR)/$*.P
 	@sed -e 's/#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' -e '/^$$/ d' -e 's/$$/ :/' < $(BUILDDIR)/$*.d >> $(BUILDDIR)/$*.P;

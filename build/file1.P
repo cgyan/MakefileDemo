@@ -1,4 +1,4 @@
-build/file1.o: src/file1.cpp inc/prism/file1 inc/prism/h/file1.h \
+build/file1.o: src/file1.cpp inc/prism/file1 inc/prism/core/file1.h \
  C:/Program_Files/mingw-w64/x86_64-6.3.0-posix-sjlj-rt_v5-rev2/mingw64/lib/gcc/x86_64-w64-mingw32/6.3.0/include/c++/iostream \
  C:/Program_Files/mingw-w64/x86_64-6.3.0-posix-sjlj-rt_v5-rev2/mingw64/lib/gcc/x86_64-w64-mingw32/6.3.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/Program_Files/mingw-w64/x86_64-6.3.0-posix-sjlj-rt_v5-rev2/mingw64/lib/gcc/x86_64-w64-mingw32/6.3.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -121,7 +121,7 @@ build/file1.o: src/file1.cpp inc/prism/file1 inc/prism/h/file1.h \
  C:/Program_Files/mingw-w64/x86_64-6.3.0-posix-sjlj-rt_v5-rev2/mingw64/lib/gcc/x86_64-w64-mingw32/6.3.0/include/c++/bits/ostream.tcc \
  C:/Program_Files/mingw-w64/x86_64-6.3.0-posix-sjlj-rt_v5-rev2/mingw64/lib/gcc/x86_64-w64-mingw32/6.3.0/include/c++/istream \
  C:/Program_Files/mingw-w64/x86_64-6.3.0-posix-sjlj-rt_v5-rev2/mingw64/lib/gcc/x86_64-w64-mingw32/6.3.0/include/c++/bits/istream.tcc
-src/file1.cpp inc/prism/file1 inc/prism/h/file1.h :
+src/file1.cpp inc/prism/file1 inc/prism/core/file1.h :
 /Program_Files/mingw-w64/x86_64-6.3.0-posix-sjlj-rt_v5-rev2/mingw64/lib/gcc/x86_64-w64-mingw32/6.3.0/include/c++/iostream :
 /Program_Files/mingw-w64/x86_64-6.3.0-posix-sjlj-rt_v5-rev2/mingw64/lib/gcc/x86_64-w64-mingw32/6.3.0/include/c++/x86_64-w64-mingw32/bits/c++config.h :
 /Program_Files/mingw-w64/x86_64-6.3.0-posix-sjlj-rt_v5-rev2/mingw64/lib/gcc/x86_64-w64-mingw32/6.3.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h :
