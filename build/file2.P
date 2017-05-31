@@ -1,0 +1,2 @@
+build/file2.o: src/file2.cpp
+src/file2.cpp :

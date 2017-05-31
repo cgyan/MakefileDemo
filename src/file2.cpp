@@ -1,0 +1,3 @@
+void file2func() {
+    
+}
